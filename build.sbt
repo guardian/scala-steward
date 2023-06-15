@@ -222,7 +222,7 @@ lazy val core = myCrossProject("core")
     }.taskValue,
     run / fork := true,
     // Uncomment for remote debugging:
-    // run / javaOptions += "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005",
+    run / javaOptions += "-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005",
     Test / fork := true,
     Compile / resourceGenerators += Def.task {
       val outDir = (Compile / resourceManaged).value
